@@ -37,7 +37,7 @@ namespace Blog.Models
 
                 return true;
             }
-            catch (Exception e)
+            catch 
             {
                 return false;
             }
@@ -100,7 +100,7 @@ namespace Blog.Models
 
                
             }
-            catch (Exception e)
+            catch
             {
                 return false;
             }
