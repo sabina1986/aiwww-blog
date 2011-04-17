@@ -7,6 +7,7 @@
 
 #main
 {
+    background-image: url('./baner2.jpg');
     background-color: White;   
 }
 
@@ -18,7 +19,7 @@
 
 #title
 {
-    background-image: url('baner.jpg');
+    background-image: url('./baner.jpg');
     height: 144px;
     text-align: left;
     color: Purple;

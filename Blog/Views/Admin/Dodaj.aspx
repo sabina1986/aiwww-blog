@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Blog.Models.HelperClass>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Theme="niebieski" Inherits="System.Web.Mvc.ViewPage<Blog.Models.HelperClass>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
 	Dodaj
@@ -83,7 +83,7 @@
             </div>
             
             <p>
-                <input type="submit" value="Create" />
+                <input type="submit" value="Dodaj" />
             </p>
         </fieldset>
 

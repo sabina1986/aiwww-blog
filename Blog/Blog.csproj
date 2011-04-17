@@ -134,6 +134,7 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Themes\niebieski\niebieski.skin" />
     <None Include="Models\BlogData.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>BlogData.designer.cs</LastGenOutput>

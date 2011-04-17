@@ -41,13 +41,13 @@
             </div>
         </div>
         
-        <div id="main">
-            <!-- <asp:ContentPlaceHolder ID="MainContent" runat="server"/> -->
-            
+        <div id="main" style=" background-image: ('./baner2.jpg');">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+         </div>   
             <div id="footer">
             <StopkaFV:stopka ID="stopka1" runat="server" />
             </div>
-        </div>
+        
     </div>
 </body>
 </html>
