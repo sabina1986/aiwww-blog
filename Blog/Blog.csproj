@@ -81,13 +81,26 @@
     <Compile Include="Models\PostNew.cs" />
     <Compile Include="Models\IBlogRespository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stopka.ascx.cs">
+      <DependentUpon>Stopka.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Stopka.ascx.designer.cs">
+      <DependentUpon>Stopka.ascx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\BlogDB.mdf" />
     <Content Include="App_Data\BlogDB_log.ldf">
       <DependentUpon>BlogDB.mdf</DependentUpon>
     </Content>
+    <Content Include="Content\062.gif" />
+    <Content Include="Content\baner.jpg" />
+    <Content Include="Content\baner2.jpg" />
+    <Content Include="Content\grafa.css" />
+    <Content Include="Content\menu.css" />
     <Content Include="Global.asax" />
+    <Content Include="Stopka.ascx" />
     <Content Include="Views\Admin\DodajKomentarz.aspx" />
     <Content Include="Views\Admin\DodajPost.aspx" />
     <Content Include="Views\Admin\EdytujPosta.aspx" />

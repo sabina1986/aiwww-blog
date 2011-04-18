@@ -11,7 +11,7 @@
     <% using (Html.BeginForm()) {%>
         <%= Html.ValidationSummary(true) %>
         
-        <fieldset>
+        <fieldset style="border-color: Blue;">
             <legend>Fields</legend>
             
             <div class="editor-label">
