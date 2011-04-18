@@ -31,15 +31,79 @@
     
         <tr>
             <td>
-                <%= Html.ActionLink("Edytuj", "Edytuj", new { id=m.id }) %> |
+                <%= Html.ActionLink("Edytuj", "EdytujPosta", "Admin", new { id=m.id }, null) %> |
+                <%= Html.ActionLink("Komentarz", "DodajKomentarz", "Admin", new { id=m.id }, null ) %> |
+                <%= Html.ActionLink("Usun Post", "UsunPosta", "Admin", new { id=m.id }, null ) %> |
+                 
                
             </td>
+                <td>
+                    <%= Html.Encode(m.id) %>
+                </td>
             <td>
-                <%= Html.Encode(m.id) %>
-            </td>
-            <td>
-                <h1><%= Html.Encode(m.tytul) %></h1><br />
-                <%=Html.Encode(m.tresc) %>
+
+                <table>
+                    <tr>
+                        <td>
+                            <h1><%= Html.Encode(m.tytul) %></h1><br />
+                              <%=Html.Encode(m.tresc) %>
+                        </td>
+                     </tr>
+                
+                <% AdminRespository ad = new AdminRespository();
+                          Komentarze[] tab=ad.WyswietlKomentarze(m.id);
+           
+                        if(tab.Length>0)
+                        {%>
+                    <tr>
+                        <td>
+
+                        <table>
+                                <tr>
+                                    <th></th>
+                                    <th> ID</th>
+                                    <th> Komentarz</th>
+                                </tr>
+                                
+                                 
+                                       <% foreach (Komentarze k in tab)
+                                       {%>
+
+                                <tr>
+
+                                    <td>
+                                        <%= Html.ActionLink("Usun", "UsunKomentarz", "Admin", new { id=k.id_komentarza }, null) %> |
+                                    </td>
+                                    <td>
+                                            <%=Html.Encode(k.id_komentarza) %>
+                                    </td>
+                                    <td>
+                                       
+                                           <%=Html.Encode(k.tresc_komentarza) %>
+                                           <br />
+                                           <%=Html.Encode("Autor: ") %>
+                                           <%=Html.Encode(k.autor_komentarza) %>
+                                           <br />
+                                           <%=Html.Encode("Data dodania: ") %>
+                                           <%=Html.Encode(k.data_dodania_komentarza) %>
+
+                                    
+                                    </td>
+                                
+
+                                </tr>
+                                     <% }%>
+                                    
+                            </table>
+                            
+                           
+                               
+                        </td>
+                    </tr>
+                    <% }%>        
+
+                </table>
+                
 
             </td>
             
@@ -52,7 +116,7 @@
      <!--wstawka-->
 
       <p>
-        <%= Html.ActionLink("Dodaj Post", "Dodaj", "Admin") %>
+        <%= Html.ActionLink("Dodaj Post", "DodajPost", "Admin") %>
         
      </p>
 

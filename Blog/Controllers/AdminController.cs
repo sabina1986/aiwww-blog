@@ -21,13 +21,13 @@ namespace Blog.Controllers
             return View();
         }
 
-        public ActionResult Dodaj()
+        public ActionResult DodajPost()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult Dodaj(HelperClass obiekt)
+        public ActionResult DodajPost(PostNew obiekt)
         {
             if (db_admin.DodajPosta(obiekt))
             {
@@ -40,36 +40,43 @@ namespace Blog.Controllers
             return View(obiekt);
         }
 
-        /*[HttpPost]
-        public ActionResult Edytuj()*/
-
-        public ActionResult Edytuj(int id) //w argumencie jedna wartosc
+        public ActionResult DodajKomentarz(int id)
         {
-
-           // ViewData["post"]=db_admin.edytuj(id);
-            var oryginalPost = (from m in db.Posts where m.id == id select m).First();
-            var oryginalTag = (from m in db.Tagis where m.id_post == id select m).First();
-            
-            HelperClass oryginal = new HelperClass();
-            oryginal.id = oryginalPost.id;
-            oryginal.data_dodania = oryginalPost.data_dodania;
-            oryginal.data_modyfikacji = oryginalPost.data_modyfikacji;
-            oryginal.tresc = oryginalPost.tresc;
-            oryginal.tytul = oryginalPost.tytul;
-            oryginal.status = oryginalPost.status;
-
-            oryginal.description=oryginalTag.description;
-            oryginal.keywords=oryginalTag.keywords;
-
-            return View(oryginal);
-            //return 
+            return View(db_admin.KomentarzDoPost(id));
         }
 
         [HttpPost]
-        public ActionResult Edytuj(Post postToEdit, HelperClass obiekt)
+        public ActionResult DodajKomentarz(int id, Komentarze new_komentarz)
         {
-            
-            if (db_admin.EdytujPosta(postToEdit.id, obiekt))
+            if (db_admin.DodajKomentarz(id, new_komentarz))
+            {
+                ViewData["action"] = "Komentarz zostal dodany ;)";
+            }
+            else
+            {
+                ViewData["action"] = "Komentarz nie zostal dodany ;(";
+            }
+            return View(new_komentarz);
+        }
+
+        /*[HttpPost]
+        public ActionResult Edytuj()*/
+
+        public ActionResult EdytujPosta(int id) //w argumencie jedna wartosc
+        {
+
+           // ViewData["post"]=db_admin.edytuj(id);
+           // var oryginalPost = (from m in db.Posts where m.id == id select m).First();
+           // return View(oryginalPost);            
+            return View(db_admin.Edytuj(id));
+           
+        }
+
+        [HttpPost]
+        public ActionResult EdytujPosta(int id, Post obiekt)
+        {
+            //<input type="text" value="<%=Model.id.ToString() %>" readonly = "readonly" />
+            if (db_admin.EdytujPosta(id, obiekt))
             {
                 ViewData["action"] = "Post zostal zedytowany ;)";
             }
@@ -80,29 +87,57 @@ namespace Blog.Controllers
             return View(obiekt);
         }
 
-        /*public ActionResult Edit(int id)
+        public ActionResult UsunPosta(int id) //w argumencie jedna wartosc
         {
-            var movieToEdit = (from m in _db.Movies where m.ID == id select m).First();
-            return View(movieToEdit);
+
+            // ViewData["post"]=db_admin.edytuj(id);
+            // var oryginalPost = (from m in db.Posts where m.id == id select m).First();
+            // return View(oryginalPost);            
+            return View(db_admin.UsunDoPost(id));
+
         }
 
-        //
-        // POST: /Home/Edit/5
+        [HttpPost]
+        public ActionResult UsunPosta(int id, Post post)
+        {
+            //<input type="text" value="<%=Model.id.ToString() %>" readonly = "readonly" />
+            if (db_admin.UsunPosta(id))
+            {
+                ViewData["action"] = "Post zostal usuniety ;)";
+            }
+            else
+            {
+                ViewData["action"] = "Post nie zostal usuniety ;(";
+            }
+            return View(post);
+        }
+
+        public ActionResult UsunKomentarz(int id) //w argumencie jedna wartosc
+        {
+
+            // ViewData["post"]=db_admin.edytuj(id);
+            // var oryginalPost = (from m in db.Posts where m.id == id select m).First();
+            // return View(oryginalPost);            
+            return View(db_admin.UsunDoKomentarzaIdKomentarz(id));
+
+        }
 
         [HttpPost]
-        public ActionResult Edit(Movie movieToEdit)
+        public ActionResult UsunKomentarz(int id, Komentarze komentarz)
         {
-            var oryginalMovie = (from m in _db.Movies where m.ID == movieToEdit.ID select m).First();
+            //<input type="text" value="<%=Model.id.ToString() %>" readonly = "readonly" />
+            if (db_admin.UsunKomentarz(id))
+            {
+                ViewData["action"] = "Komentarz zostal usuniety ;)";
+            }
+            else
+            {
+                ViewData["action"] = "Komentarz nie zostal usuniety ;(";
+            }
+            return View(komentarz);
+        }
 
-            if (!ModelState.IsValid)
-                return View(oryginalMovie);
-
-            _db.ApplyPropertyChanges(oryginalMovie.EntityKey.EntitySetName, movieToEdit);
-            _db.SaveChanges();
-
-            return RedirectToAction("Index");
-         }*/
-
-    
+       
+            
     }
 }

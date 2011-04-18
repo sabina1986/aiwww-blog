@@ -78,7 +78,7 @@
       <DependentUpon>BlogData.dbml</DependentUpon>
     </Compile>
     <Compile Include="Models\BlogRespository.cs" />
-    <Compile Include="Models\HelperClass.cs" />
+    <Compile Include="Models\PostNew.cs" />
     <Compile Include="Models\IBlogRespository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -88,8 +88,11 @@
       <DependentUpon>BlogDB.mdf</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
-    <Content Include="Views\Admin\Dodaj.aspx" />
-    <Content Include="Views\Admin\Edytuj.aspx" />
+    <Content Include="Views\Admin\DodajKomentarz.aspx" />
+    <Content Include="Views\Admin\DodajPost.aspx" />
+    <Content Include="Views\Admin\EdytujPosta.aspx" />
+    <Content Include="Views\Admin\UsunKomentarz.aspx" />
+    <Content Include="Views\Admin\UsunPosta.aspx" />
     <Content Include="Views\Home\Index.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
