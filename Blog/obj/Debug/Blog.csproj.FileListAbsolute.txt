@@ -1,0 +1,10 @@
+C:\Users\Janusz\documents\visual studio 2010\Projects\Blog\Blog\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Janusz\documents\visual studio 2010\Projects\Blog\Blog\bin\Blog.dll
+C:\Users\Janusz\documents\visual studio 2010\Projects\Blog\Blog\bin\Blog.pdb
+C:\Users\Janusz\documents\visual studio 2010\Projects\Blog\Blog\obj\Debug\Blog.dll
+C:\Users\Janusz\documents\visual studio 2010\Projects\Blog\Blog\obj\Debug\Blog.pdb
+C:\Documents and Settings\Kaczmarzyk\repo\blog\aiwww-blog\Blog\bin\Blog.dll
+C:\Documents and Settings\Kaczmarzyk\repo\blog\aiwww-blog\Blog\bin\Blog.pdb
+C:\Documents and Settings\Kaczmarzyk\repo\blog\aiwww-blog\Blog\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Kaczmarzyk\repo\blog\aiwww-blog\Blog\obj\Debug\Blog.dll
+C:\Documents and Settings\Kaczmarzyk\repo\blog\aiwww-blog\Blog\obj\Debug\Blog.pdb
