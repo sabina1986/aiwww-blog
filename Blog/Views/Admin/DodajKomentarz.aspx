@@ -6,16 +6,16 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>DodajKomentarz</h2>
+    <h2>Dodaj komentarz</h2>
 
     <% using (Html.BeginForm()) {%>
         <%= Html.ValidationSummary(true) %>
 
         <fieldset>
-            <legend>Fields</legend>
+            <legend>Pola</legend>
             
             <div class="editor-label">
-                <%= Html.LabelFor(model => model.id_komentarza) %>
+                <%= Html.Label("ID komentarza") %>
             </div>
             <div class="editor-field">
                 <%= Html.TextBoxFor(model => model.id_komentarza) %>
@@ -23,7 +23,7 @@
             </div>
             
             <div class="editor-label">
-                <%= Html.LabelFor(model => model.id_posta) %>
+                <%= Html.Label("ID posta") %>
             </div>
             <div class="editor-field">
                 <%= Html.TextBoxFor(model => model.id_posta) %>
@@ -31,7 +31,7 @@
             </div>
             
             <div class="editor-label">
-                <%= Html.LabelFor(model => model.tresc_komentarza) %>
+                <%= Html.Label("Treść komentarza") %>
             </div>
             <div class="editor-field">
                 <%= Html.TextBoxFor(model => model.tresc_komentarza) %>
@@ -39,7 +39,7 @@
             </div>
             
             <div class="editor-label">
-                <%= Html.LabelFor(model => model.autor_komentarza) %>
+                <%= Html.Label("Autor komentarza") %>
             </div>
             <div class="editor-field">
                 <%= Html.TextBoxFor(model => model.autor_komentarza) %>
@@ -47,7 +47,7 @@
             </div>
             
             <div class="editor-label">
-                <%= Html.LabelFor(model => model.data_dodania_komentarza) %>
+                <%= Html.Label("Data dodania komentarza") %>
             </div>
             <div class="editor-field">
                 <%= Html.TextBoxFor(model => model.data_dodania_komentarza) %>
@@ -55,7 +55,7 @@
             </div>
             
             <div class="editor-label">
-                <%= Html.LabelFor(model => model.status) %>
+                <%= Html.Label("Status komentarza") %>
             </div>
             <div class="editor-field">
                 <%= Html.TextBoxFor(model => model.status) %>
@@ -63,7 +63,7 @@
             </div>
             
             <p>
-                <input type="submit" value="Create" />
+                <input type="submit" value="Dodaj komentarz" />
             </p>
         </fieldset>
 

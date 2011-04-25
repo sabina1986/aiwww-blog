@@ -6,16 +6,16 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>EdytujPosta</h2>
+    <h2>Edytuj posta</h2>
 
     <% using (Html.BeginForm()) {%>
         <%= Html.ValidationSummary(true) %>
         
         <fieldset>
-            <legend>Fields</legend>
+            <legend>Pola</legend>
             
             <div class="editor-label">
-                <%= Html.LabelFor(model => model.id) %>
+                <%= Html.Label("ID posta") %>
             </div>
             <div class="editor-field">
                 <%= Html.TextBoxFor(model => model.id) %>
@@ -23,7 +23,7 @@
             </div>
             
             <div class="editor-label">
-                <%= Html.LabelFor(model => model.tytul) %>
+                <%= Html.Label("Tytuł posta") %>
             </div>
             <div class="editor-field">
                 <%= Html.TextBoxFor(model => model.tytul) %>
@@ -31,7 +31,7 @@
             </div>
             
             <div class="editor-label">
-                <%= Html.LabelFor(model => model.tresc) %>
+                <%= Html.Label("Treść posta")%>
             </div>
             <div class="editor-field">
                 <%= Html.TextBoxFor(model => model.tresc) %>
@@ -39,7 +39,7 @@
             </div>
             
             <div class="editor-label">
-                <%= Html.LabelFor(model => model.status) %>
+                <%= Html.Label("Status posta") %>
             </div>
             <div class="editor-field">
                 <%= Html.TextBoxFor(model => model.status) %>
@@ -47,7 +47,7 @@
             </div>
             
             <div class="editor-label">
-                <%= Html.LabelFor(model => model.data_dodania) %>
+                <%= Html.Label("Data dodania") %>
             </div>
             <div class="editor-field">
                 <%= Html.TextBoxFor(model => model.data_dodania, String.Format("{0:g}", Model.data_dodania)) %>
@@ -55,7 +55,7 @@
             </div>
             
             <div class="editor-label">
-                <%= Html.LabelFor(model => model.data_modyfikacji) %>
+                <%= Html.Label("Data modyfikacji") %>
             </div>
             <div class="editor-field">
                 <%= Html.TextBoxFor(model => model.data_modyfikacji, String.Format("{0:g}", Model.data_modyfikacji)) %>
@@ -63,7 +63,7 @@
             </div>
             
             <p>
-                <input type="submit" value="Save" />
+                <input type="submit" value="Zapisz" />
             </p>
         </fieldset>
 
