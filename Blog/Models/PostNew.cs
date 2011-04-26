@@ -34,13 +34,30 @@ namespace Blog.Models
         [Required(ErrorMessage="Pole wymagane")]
         public string tytul { get; set; }
 
+        [RegularExpression(@"[A-za-z ]{0,100}", ErrorMessage = "Niedozwolony znak")]
+        [Required(ErrorMessage = "Pole wymagane")]
+        public string tresc { get; set; }
+
         [RegularExpression(@"[0-9][0-9]-[0-9][0-9]-[0-9][0-9][0-9][0-9]", ErrorMessage = "Wymagany format daty dd-mm-yyyy")]
         [Required(ErrorMessage = "Pole wymagane")]
         public DateTime data_dodania { get; set; }
 
+        [RegularExpression(@"[0-9][0-9]-[0-9][0-9]-[0-9][0-9][0-9][0-9]", ErrorMessage = "Wymagany format daty dd-mm-yyyy")]
+        [Required(ErrorMessage = "Pole wymagane")]
+        public DateTime data_modyfikacji { get; set; }
 
+        [RegularExpression(@"[A-za-z ]", ErrorMessage = "Niedozwolony znak")]
+        [Required(ErrorMessage = "Pole wymagane")]
+        public string keywords { get; set; }
 
-    
+        [RegularExpression(@"[A-za-z ]", ErrorMessage = "Niedozwolony znak")]
+        [Required(ErrorMessage = "Pole wymagane")]
+        public string description { get; set; }
+
+        [RegularExpression(@"[0-1]", ErrorMessage = "Niedozwolony znak")]
+        [Required(ErrorMessage = "Pole wymagane")]
+        public string status { get; set; }
+
     }
 
 }
