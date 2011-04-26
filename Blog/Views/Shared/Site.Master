@@ -11,6 +11,16 @@
     <link href="../../Content/grafa.css" rel="stylesheet" type="text/css" />
     <!--<link href="../../Content/Site.css" rel="stylesheet" type="text/css" />-->
     <style type="text/css">
+        a:visited, a:link
+        {
+            color: Blue;    
+        }
+        
+        a:active, a:hover
+        {
+            color: Black;    
+        }
+        
         #menucontainer
         {
             height: 65px;
@@ -18,6 +28,32 @@
         #footer
         {
             height: 79px;
+        }
+        .field-validation-error
+        {
+            color: #ff0000;
+        }
+
+        .field-validation-valid
+        {
+            display: none;
+        }
+
+        .input-validation-error
+        {
+            border: 1px solid #ff0000;
+            background-color: #ffeeee;
+        }
+
+        .validation-summary-errors
+        {
+            font-weight: bold;
+            color: #ff0000;
+        }
+
+        .validation-summary-valid
+        {
+            display: none;
         }
     </style>
 </head>

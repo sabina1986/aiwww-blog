@@ -7,26 +7,27 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h2>Dodaj komentarz</h2>
-
+     <!-- tresc wprowadzanych danych będzie na bieżąco sprawdzana u klienta-->
+    <%Html.EnableClientValidation(); %>
     <% using (Html.BeginForm()) {%>
         <%= Html.ValidationSummary(true) %>
 
         <fieldset>
             <legend>Pola</legend>
-            
+            <!--
             <div class="editor-label">
-                <%= Html.Label("ID komentarza") %>
+                <-%= Html.Label("ID komentarza") %>
             </div>
             <div class="editor-field">
-                <%= Html.TextBoxFor(model => model.id_komentarza, new { disabled = true })%>
-                <%= Html.ValidationMessageFor(model => model.id_komentarza) %>
+                <-%= Html.TextBoxFor(model => model.id_komentarza, new { disabled = true })%>
+                <-%= Html.ValidationMessageFor(model => model.id_komentarza) %>
             </div>
-            
+            -->
             <div class="editor-label">
                 <%= Html.Label("ID posta") %>
             </div>
             <div class="editor-field">
-                <%= Html.TextBoxFor(model => model.id_posta) %>
+                <%= Html.TextBoxFor(model => model.id_posta, new { enabled = false})%>
                 <%= Html.ValidationMessageFor(model => model.id_posta) %>
             </div>
             

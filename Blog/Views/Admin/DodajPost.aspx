@@ -16,14 +16,14 @@
 
         <fieldset>
             <legend>Pola</legend>
-            
+            <!--
             <div class="editor-label">
-                <%= Html.Label("ID posta") %>
+            <-%= Html.Label("ID posta") %>
             </div>
             <div class="editor-field">
-                <%= Html.TextBoxFor(model => model.id, new { disabled = true, Visible = false })%>
-               <%= Html.ValidationMessageFor(model => model.id) %>
-            </div>
+                <-%= Html.TextBoxFor(model => model.id, new { disabled = true, Visible = false })%>
+               <-%= Html.ValidationMessageFor(model => model.id) %>
+            </div>-->
             
             <div class="editor-label">
                 <%= Html.Label("Data dodania posta") %>

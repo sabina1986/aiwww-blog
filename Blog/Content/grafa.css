@@ -67,34 +67,36 @@ hr
     color: Blue;    
 }
 
+
 fieldset 
 {
     border-color: Blue;
 }
 
-field-validation-error
+.field-validation-error
 {
     color: #ff0000;
 }
 
-field-validation-valid
+.field-validation-valid
 {
     display: none;
 }
 
-input-validation-error
+.input-validation-error
 {
     border: 1px solid #ff0000;
     background-color: #ffeeee;
 }
 
-validation-summary-errors
+.validation-summary-errors
 {
     font-weight: bold;
     color: #ff0000;
 }
 
-validation-summary-valid
+.validation-summary-valid
 {
     display: none;
 }
+

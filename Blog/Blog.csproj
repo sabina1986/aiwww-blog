@@ -78,6 +78,7 @@
       <DependentUpon>BlogData.dbml</DependentUpon>
     </Compile>
     <Compile Include="Models\BlogRespository.cs" />
+    <Compile Include="Models\KomentNew.cs" />
     <Compile Include="Models\PostNew.cs" />
     <Compile Include="Models\IBlogRespository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
