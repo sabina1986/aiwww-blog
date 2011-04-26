@@ -18,7 +18,7 @@
                 <%= Html.Label("ID komentarza") %>
             </div>
             <div class="editor-field">
-                <%= Html.TextBoxFor(model => model.id_komentarza) %>
+                <%= Html.TextBoxFor(model => model.id_komentarza, new { disabled = true })%>
                 <%= Html.ValidationMessageFor(model => model.id_komentarza) %>
             </div>
             

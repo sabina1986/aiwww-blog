@@ -18,7 +18,7 @@
                 <%= Html.Label("ID posta") %>
             </div>
             <div class="editor-field">
-                <%= Html.TextBoxFor(model => model.id) %>
+                <%= Html.TextBoxFor(model => model.id, new {disabled = true}) %>
                 <%= Html.ValidationMessageFor(model => model.id) %>
             </div>
             

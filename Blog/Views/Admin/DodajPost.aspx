@@ -8,6 +8,9 @@
 
     <h2>Dodaj post</h2>
 
+    <!-- tresc wprowadzanych danych będzie na bieżąco sprawdzana u klienta-->
+    <%Html.EnableClientValidation(); %>
+    
     <% using (Html.BeginForm()) {%>
         <%= Html.ValidationSummary(true) %>
 
@@ -18,15 +21,15 @@
                 <%= Html.Label("ID posta") %>
             </div>
             <div class="editor-field">
-                <%= Html.TextBoxFor(model => model.id) %>
-                <%= Html.ValidationMessageFor(model => model.id) %>
+                <%= Html.TextBoxFor(model => model.id, new { disabled = true, Visible = false })%>
+               <%= Html.ValidationMessageFor(model => model.id) %>
             </div>
             
             <div class="editor-label">
                 <%= Html.Label("Data dodania posta") %>
             </div>
             <div class="editor-field">
-                <%= Html.TextBoxFor(model => model.data_dodania) %>
+                <%= Html.TextBoxFor(model => model.data_dodania)%>
                 <%= Html.ValidationMessageFor(model => model.data_dodania) %>
             </div>
             
@@ -80,6 +83,7 @@
             
             <p>
                 <input type="submit" value="Dodaj post" />
+                
             </p>
         </fieldset>
 

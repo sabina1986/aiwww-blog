@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 
 namespace Blog.Models
-{
+{    
     [MetadataType(typeof(PostObiektValidate))]
     public class PostNew
     {
@@ -24,9 +24,12 @@ namespace Blog.Models
         //przepisac pola z tabel polaczonych;)
     }
 
-    [Bind(Exclude="id, status")]
+    [Bind(Exclude = "id, status")]
     public class PostObiektValidate
     {
+        [ScaffoldColumn(true)]
+        public int id { get; set; }
+
         [RegularExpression(@"[A-za-z ]{3,100}", ErrorMessage = "Niedozwolony znak")]
         [Required(ErrorMessage="Pole wymagane")]
         public string tytul { get; set; }
@@ -37,7 +40,7 @@ namespace Blog.Models
 
 
 
-
+    
     }
 
 }
