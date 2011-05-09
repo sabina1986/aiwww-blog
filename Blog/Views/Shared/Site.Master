@@ -1,5 +1,5 @@
-﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
-<%@ Register TagPrefix="StopkaFV" TagName="stopka" Src="~/Stopka.ascx" %>
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage"%>
+<%@ Register TagPrefix="StopkaFV" TagName="stopka" Src="~/Stopka.ascx" %>>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -10,51 +10,9 @@
         <script src="/Scripts/MicrosoftMvcValidation.js" type="text/javascript"></script>
     <link href="../../Content/grafa.css" rel="stylesheet" type="text/css" />
     <!--<link href="../../Content/Site.css" rel="stylesheet" type="text/css" />-->
-    <style type="text/css">
-        a:visited, a:link
-        {
-            color: Blue;    
-        }
+    <style type="text/css" >
+       
         
-        a:active, a:hover
-        {
-            color: Black;    
-        }
-        
-        #menucontainer
-        {
-            height: 65px;
-        }
-        #footer
-        {
-            height: 79px;
-        }
-        .field-validation-error
-        {
-            color: #ff0000;
-        }
-
-        .field-validation-valid
-        {
-            display: none;
-        }
-
-        .input-validation-error
-        {
-            border: 1px solid #ff0000;
-            background-color: #ffeeee;
-        }
-
-        .validation-summary-errors
-        {
-            font-weight: bold;
-            color: #ff0000;
-        }
-
-        .validation-summary-valid
-        {
-            display: none;
-        }
     </style>
 </head>
 

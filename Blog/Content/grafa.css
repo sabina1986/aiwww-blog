@@ -1,6 +1,6 @@
 ﻿body 
 {
-    background-color: White;
+    background-color: Yellow;
     background-image: url(./062.gif);
     font-family: Georgia;
 }
@@ -13,8 +13,8 @@
 
 #footer
 {
-    background-color: White;
-    height:100px;     
+    background-color: Yellow;
+    height:50px;     
 }
 
 #title
@@ -67,7 +67,6 @@ hr
     color: Blue;    
 }
 
-
 fieldset 
 {
     border-color: Blue;
@@ -98,5 +97,20 @@ fieldset
 .validation-summary-valid
 {
     display: none;
+}
+
+a:visited, a:link
+{
+    color: Blue;    
+}
+        
+a:active, a:hover
+{
+    color: Black;    
+}
+        
+#menucontainer
+{
+     height: 65px;
 }
 
