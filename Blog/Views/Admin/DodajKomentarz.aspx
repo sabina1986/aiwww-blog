@@ -27,7 +27,7 @@
                 <%= Html.Label("ID posta") %>
             </div>
             <div class="editor-field">
-                <%= Html.TextBoxFor(model => model.id_posta, new { enabled = false})%>
+                <%= Html.TextBoxFor(model => model.id_posta, new { readOnly = true})%>
                 <%= Html.ValidationMessageFor(model => model.id_posta) %>
             </div>
             
@@ -64,7 +64,7 @@
             </div>
             
             <p>
-                <input type="submit" value="Dodaj komentarz" />
+                <input id="potwierdzenie" type="submit" value="Dodaj komentarz" />
             </p>
         </fieldset>
 
