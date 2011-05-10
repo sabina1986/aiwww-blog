@@ -2,26 +2,17 @@
 <%@ Import Namespace="Blog.Models" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	Index
+	Zarzadzanie
 </asp:Content>
 
-<asp:Content ID="indexContent" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="zarzadzanieContent2" ContentPlaceHolderID="MainContent" runat="server">
 
-     <!--<ul>
-          <% foreach (Post m in (IEnumerable)ViewData.Model)
-
-          { %>
-               <li> <%= m.tytul %> </li>
-          <% } %>
-     </ul>-->
-
-     <!--wstawka-->
-     <table>
+   <table>
         <tr>
             <th></th>
-            <!--<th>
+            <th>
                 ID
-            </th> -->
+            </th> 
             <th>
                 Tytul
             </th>
@@ -31,15 +22,15 @@
     
         <tr>
             <td>
-               <!-- <%= Html.ActionLink("Edytuj", "EdytujPosta", "Admin", new { id=m.id }, null) %> |-->
+                <%= Html.ActionLink("Edytuj", "EdytujPosta", "Admin", new { id=m.id }, null) %> |
                 <%= Html.ActionLink("Dodaj Komentarz", "DodajKomentarz", "Admin", new { id=m.id }, null ) %> |
-               <!-- <%= Html.ActionLink("Usun Post", "UsunPosta", "Admin", new { id=m.id }, null ) %> |-->
+                <%= Html.ActionLink("Usun Post", "UsunPosta", "Admin", new { id=m.id }, null ) %> |
                  
                
             </td>
-                <!-- <td>
+                 <td>
                     <%= Html.Encode(m.id) %>
-                </td> -->
+                </td> 
             <td>
 
                 <table>
@@ -60,8 +51,8 @@
 
                         <table>
                                 <tr>
-                                    <!-- <th></th> -->
-                                    <!--<th> ID</th>-->
+                                     <th></th> 
+                                    <th> ID</th>
                                     <th> Komentarz</th>
                                 </tr>
                                 
@@ -71,12 +62,12 @@
 
                                 <tr>
 
-                                    <!-- <td>
+                                     <td>
                                         <%= Html.ActionLink("Usun", "UsunKomentarz", "Admin", new { id=k.id_komentarza }, null) %> |
-                                    </td> -->
-                                    <!-- <td>
+                                    </td> 
+                                     <td>
                                             <%=Html.Encode(k.id_komentarza) %>
-                                    </td> -->
+                                    </td> 
                                     <td>
                                        
                                            <%=Html.Encode(k.tresc_komentarza) %>
@@ -112,17 +103,11 @@
     <% } %>
 
     </table>
-
-     <!--wstawka-->
-
-      <!-- <p>
+    
+    <p>
         <%= Html.ActionLink("Dodaj Post", "DodajPost", "Admin") %>
         
-     </p> -->
+     </p> 
 
 
 </asp:Content>
-
-
-
-

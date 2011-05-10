@@ -37,7 +37,7 @@ namespace Blog.Models
 
                 return true;
             }
-            catch 
+            catch
             {
                 return false;
             }
@@ -75,7 +75,7 @@ namespace Blog.Models
 
                 return true;
             }
-            catch
+            catch 
             {
                 return false;
             }

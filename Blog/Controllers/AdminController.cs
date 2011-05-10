@@ -21,6 +21,15 @@ namespace Blog.Controllers
             return View();
         }
 
+        public ActionResult Zarzadzanie()
+        {
+            var _db = new BlogDataDataContext();
+            var posts = from m in _db.Posts
+                        select m;
+            return View(posts);
+            //return View();
+        }
+
         public ActionResult DodajPost()
         {
             return View();
