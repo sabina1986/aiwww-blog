@@ -107,6 +107,7 @@
     <Content Include="Views\Admin\EdytujPosta.aspx" />
     <Content Include="Views\Admin\UsunKomentarz.aspx" />
     <Content Include="Views\Admin\UsunPosta.aspx" />
+    <Content Include="Views\Admin\WyswietlPostData.aspx" />
     <Content Include="Views\Admin\Zarzadzanie.aspx" />
     <Content Include="Views\Home\Index.aspx" />
     <Content Include="Web.config" />

@@ -47,7 +47,7 @@
 #menu a:link, #menu a:visited {
 	text-decoration: none;
 	display: block;
-	width: 95px;
+	width: 135px;
 	text-align: center;
 	padding: 5px 0;
 	font-weight: bold;
@@ -114,3 +114,12 @@ a:active, a:hover
      height: 65px;
 }
 
+table 
+{
+    background-color: orange;
+    vertical-align: top;
+    font-weight: bold;
+    color: Blue;
+    border-collapse: separate;
+    border: 1px solid Blue;    
+}

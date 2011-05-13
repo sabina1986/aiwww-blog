@@ -36,6 +36,7 @@
                 <table>
                     <tr>
                         <td>
+                        
                             <h1><%= Html.Encode(m.tytul) %></h1><br />
                               <%=Html.Encode(m.tresc) %>
                         </td>
