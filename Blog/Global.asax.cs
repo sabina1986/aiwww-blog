@@ -17,10 +17,21 @@ namespace Blog
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+              "WyswietlPostData",
+              "{controller}/{WyswietlPostData}/{data}",
+              new { controller = "Admin", action = "WyswietlPostData" }
+              );
+
+            routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{id}", // URL with parameters
                 new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
             );
+
+            
+
+
+           
 
         }
 
@@ -32,3 +43,39 @@ namespace Blog
         }
     }
 }
+
+
+
+/*
+ 
+ 
+ 
+   <!-- 
+    <fieldset>
+        <legend>Fields</legend>
+        
+        <div class="display-label">id</div>
+        <div class="display-field"><%= Html.Encode(Model.id) %></div>
+        
+        <div class="display-label">tytul</div>
+        <div class="display-field"><%= Html.Encode(Model.tytul) %></div>
+        
+        <div class="display-label">tresc</div>
+        <div class="display-field"><%= Html.Encode(Model.tresc) %></div>
+        
+        <div class="display-label">status</div>
+        <div class="display-field"><%= Html.Encode(Model.status) %></div>
+        
+        <div class="display-label">data_dodania</div>
+        <div class="display-field"><%= Html.Encode(String.Format("{0:g}", Model.data_dodania)) %></div>
+        
+        <div class="display-label">data_modyfikacji</div>
+        <div class="display-field"><%= Html.Encode(String.Format("{0:g}", Model.data_modyfikacji)) %></div>
+        
+    </fieldset>
+    <p>
+
+        <%= Html.ActionLink("Edit", "Edit", new { id=Model.id }) %> |
+        <%= Html.ActionLink("Back to List", "Index") %>
+    </p>-->
+ */

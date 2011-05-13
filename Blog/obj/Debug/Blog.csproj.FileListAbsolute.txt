@@ -23,3 +23,8 @@ D:\aiwww-blog\Blog\bin\Blog.pdb
 D:\aiwww-blog\Blog\obj\Debug\ResolveAssemblyReference.cache
 D:\aiwww-blog\Blog\obj\Debug\Blog.dll
 D:\aiwww-blog\Blog\obj\Debug\Blog.pdb
+C:\Users\Janusz\repo\aiwww-blog\Blog\bin\Blog.dll
+C:\Users\Janusz\repo\aiwww-blog\Blog\bin\Blog.pdb
+C:\Users\Janusz\repo\aiwww-blog\Blog\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Janusz\repo\aiwww-blog\Blog\obj\Debug\Blog.dll
+C:\Users\Janusz\repo\aiwww-blog\Blog\obj\Debug\Blog.pdb

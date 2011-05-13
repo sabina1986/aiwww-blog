@@ -21,6 +21,29 @@ namespace Blog.Controllers
             return View();
         }
 
+       
+
+        public ActionResult WyswietlPostData(string data)
+        {
+            int year = int.Parse(data.Substring(0, 4));
+            int month = int.Parse(data.Substring(5, 2));
+            int day = int.Parse(data.Substring(8, 2));
+
+            DateTime data2 = new DateTime(year, month, day);
+
+           var _db= new BlogDataDataContext();
+            
+            var posts = from m in db.Posts where m.data_dodania.Date==data2.Date
+                        select m;
+
+            
+
+            return View(posts);
+            /*ViewData["data"] = data2;
+            return View();*/
+        }
+
+       
         public ActionResult Zarzadzanie()
         {
             var _db = new BlogDataDataContext();
