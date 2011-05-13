@@ -81,10 +81,6 @@ fieldset
 {
     display: none;
 }
-.field-validation-valid
-{
-    display: none;
-}
 
 .input-validation-error
 {
