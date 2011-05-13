@@ -5,3 +5,4 @@
 *.suo
 *.stackdump     
 Blog/bin    # ignoruj wszystkie pliki w katalogu build/
+Blog/obj
