@@ -6,14 +6,14 @@
 </asp:Content>
 
 <asp:Content ID="zarzadzanieContent2" ContentPlaceHolderID="MainContent" runat="server">
-<table id="posty" width="1000" border="2px" rules="groups" cellpadding="10" style="border-collapse: collapse;">
+<table id="posty" width="1000" border="2px" rules="groups" cellpadding="10" style="border-collapse: collapse; margin-left: 80px; margin-top: 20px;">
     <tr>
         <th> ID </th>
-        <th colspan="2"> Tytuł </th>
+        <th colspan="2"> Tytuł i treść </th>
     </tr>
 
     <% foreach (Post m in (IEnumerable)ViewData.Model) { %>
-    <tbody  style="background-color: #00DFFF;">
+    <tbody  style="background-color: #00ACCC;">
     <tr align="center">
         <td> <%= Html.Encode(m.id) %> </td>
         <td colspan="2"> <h1><%= Html.Encode(m.tytul) %></h1> </td>
