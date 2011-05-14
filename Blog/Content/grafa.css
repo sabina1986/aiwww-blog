@@ -112,14 +112,19 @@ a:active, a:hover
 #menucontainer
 {
      height: 65px;
+     width: 200px;
 }
 
 table 
 {
-    background-color: Orange;
     vertical-align: top;
     font-weight: bold;
     color: Blue;
-    border-collapse: separate;
+    border-collapse: collapse;
     border: 1px solid Blue;    
+}
+
+#posty
+{
+    width: 1000;
 }
