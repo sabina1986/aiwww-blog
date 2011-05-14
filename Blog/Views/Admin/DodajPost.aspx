@@ -82,7 +82,7 @@
             </div>
             
             <p>
-                <input type="submit" value="Dodaj post" />
+                <input id="potwierdzenie" type="submit" value="Dodaj post" />
                 
             </p>
         </fieldset>

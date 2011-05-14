@@ -111,8 +111,32 @@ a:active, a:hover
         
 #menucontainer
 {
-     height: 65px;
+     height: 30px;
      width: 200px;
+}
+
+input
+{
+    width: 800px;
+    height: 200px;    
+}
+
+#tresc_komentarza, #tresc
+{
+    width: 800px;
+    height: 100px;  
+}
+
+#autor_komentarza, #id_posta, #data_dodania_komentarza, #status, #data_dodania, #tytul, #data_modyfikacji, #keywords, #description
+{
+    width: 800px;
+    height: 20px;
+}
+
+#potwierdzenie
+{   
+    width: 120px;
+    height: 30px; 
 }
 
 table 
