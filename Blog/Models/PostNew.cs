@@ -30,11 +30,11 @@ namespace Blog.Models
         /*[ScaffoldColumn(true)]
         public int id { get; set; }*/
 
-        [RegularExpression(@"[A-za-z ]{3,100}", ErrorMessage = "Niedozwolony znak")]
+        [RegularExpression(@"[A-za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ ]{3,100}", ErrorMessage = "Niedozwolony znak")]
         [Required(ErrorMessage="Pole wymagane")]
         public string tytul { get; set; }
 
-        [RegularExpression(@"[A-za-z 0-9]{3,100}", ErrorMessage = "Niedozwolony znak")]
+        [RegularExpression(@"[A-za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ 0-9]*", ErrorMessage = "Niedozwolony znak")]
         [Required(ErrorMessage = "Pole wymagane")]
         public string tresc { get; set; }
 
@@ -47,15 +47,15 @@ namespace Blog.Models
         [Required(ErrorMessage = "Pole wymagane")]
         public DateTime data_modyfikacji { get; set; }
 
-        [RegularExpression(@"[A-za-z ]{1,10}", ErrorMessage = "Niedozwolony znak")]
+        [RegularExpression(@"[A-za-z ]{1,30}", ErrorMessage = "Niedozwolony znak")]
         [Required(ErrorMessage = "Pole wymagane")]
         public string keywords { get; set; }
 
-        [RegularExpression(@"[A-za-z ]{1,10}", ErrorMessage = "Niedozwolony znak")]
+        [RegularExpression(@"[A-za-z ]{1,30}", ErrorMessage = "Niedozwolony znak")]
         [Required(ErrorMessage = "Pole wymagane")]
         public string description { get; set; }
 
-        [RegularExpression(@"[0-1]", ErrorMessage = "Niedozwolony znak")]
+        [RegularExpression(@"[0-1]{1}", ErrorMessage = "Niedozwolony znak")]
         [Required(ErrorMessage = "Pole wymagane")]
         public string status { get; set; }
 

@@ -16,11 +16,7 @@ namespace Blog
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute(
-              "WyswietlPostData",
-              "{controller}/{WyswietlPostData}/{data}",
-              new { controller = "Admin", action = "WyswietlPostData" }
-              );
+            
 
             routes.MapRoute(
                 "Default", // Route name
@@ -28,9 +24,13 @@ namespace Blog
                 new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
             );
 
-            
 
 
+            routes.MapRoute(
+              "WyswietlPostData",
+              "{controller}/{WyswietlPostData}/{data}",
+              new { controller = "Admin", action = "WyswietlPostData" }
+              );
            
 
         }
