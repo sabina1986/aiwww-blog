@@ -127,7 +127,7 @@ input
     height: 100px;  
 }
 
-#autor_komentarza, #id_posta, #data_dodania_komentarza, #status, #data_dodania, #tytul, #data_modyfikacji, #keywords, #description
+#autor_komentarza, #id_posta, #data_dodania_komentarza, #status, #data_dodania, #tytul, #data_modyfikacji, #keywords, #description, #id
 {
     width: 800px;
     height: 20px;

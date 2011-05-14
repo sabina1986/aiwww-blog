@@ -35,7 +35,7 @@
                 <%= Html.Label("Treść komentarza") %>
             </div>
             <div class="editor-field">
-                <%= Html.TextBoxFor(model => model.tresc_komentarza) %>
+                <%= Html.TextBoxFor(model => model.tresc_komentarza, new { TextMode = TextBoxMode.Password })%>
                 <%= Html.ValidationMessageFor(model => model.tresc_komentarza) %>
             </div>
             

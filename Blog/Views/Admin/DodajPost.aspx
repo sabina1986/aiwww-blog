@@ -45,7 +45,7 @@
                 <%= Html.Label("Treść posta") %>
             </div>
             <div class="editor-field">
-                <%= Html.TextBoxFor(model => model.tresc) %>
+                <%= Html.TextBoxFor(model => model.tresc, new { TextMode = TextBoxMode.Password })%>
                 <%= Html.ValidationMessageFor(model => model.tresc) %>
             </div>
             
