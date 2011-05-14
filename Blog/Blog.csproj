@@ -99,6 +99,7 @@
     <Content Include="Content\baner.jpg" />
     <Content Include="Content\baner2.jpg" />
     <Content Include="Content\grafa.css" />
+    <Content Include="Content\icodna.ico" />
     <Content Include="Content\menu.css" />
     <Content Include="Global.asax" />
     <Content Include="Stopka.ascx" />
