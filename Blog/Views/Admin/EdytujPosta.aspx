@@ -13,15 +13,15 @@
         
         <fieldset>
             <legend>Pola</legend>
-            
+            <!--
             <div class="editor-label">
-                <%= Html.Label("ID posta") %>
+                <-%= Html.Label("ID posta") %>
             </div>
             <div class="editor-field">
-                <%= Html.TextBoxFor(model => model.id, new {disabled = true}) %>
-                <%= Html.ValidationMessageFor(model => model.id) %>
+                <-%= Html.TextBoxFor(model => model.id, new {readOnly = true}) %>
+                <-%= Html.ValidationMessageFor(model => model.id) %>
             </div>
-            
+            -->
             <div class="editor-label">
                 <%= Html.Label("Tytuł posta") %>
             </div>
@@ -63,7 +63,7 @@
             </div>
             
             <p>
-                <input type="submit" value="Zapisz" />
+                <input id="potwierdzenie" type="submit" value="Zapisz" />
             </p>
         </fieldset>
 
