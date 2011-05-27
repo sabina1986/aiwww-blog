@@ -22,7 +22,7 @@
 					autoOpen: false,
 					width: 600,
 					buttons: {
-						"Ok": function() { 
+						"OK": function() { 
 							$(this).dialog("close"); 
 						}, 
 						"Cancel": function() { 
@@ -47,6 +47,7 @@
         <style type="text/css">
 			/*demo page css*/
 			/*body{ font: 62.5% "Trebuchet MS", sans-serif; margin: 50px;}**/
+			#dialog {border: solid; border-color: #146ABD; background-color: #ADFFFF;}
 			.demoHeaders { margin-top: 2em; }
 			#dialog_link {padding: .4em 1em .4em 20px;text-decoration: none;position: relative;}
 			#dialog_link span.ui-icon {margin: 0 5px 0 0;position: absolute;left: .2em;top: 50%;margin-top: -8px;}
@@ -54,8 +55,6 @@
 			ul#icons li {margin: 2px; position: relative; padding: 4px 0; cursor: pointer; float: left;  list-style: none;}
 			ul#icons span.ui-icon {float: left; margin: 0 4px;}
 		</style>
-
-
 </head>
 
 <body>
@@ -75,12 +74,12 @@
                 <ul id="menu">              
                     <li><%= Html.ActionLink("Home", "Index", "Home")%></li>
                     <li><%= Html.ActionLink("Management", "Zarzadzanie", "Admin")%></li>
-                    
+                    <li><a href="#" id="dialog_link" class="ui-state-default ui-corner-all"><span class="ui-icon ui-icon-newwin"></span>Autorzy</a></li>
                 </ul>
-  
+
             </div>
         </div>
-        
+          <br /><br /><br />
         <div id="main" style=" background-image: ('./baner2.jpg');">
             <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
          </div>   
@@ -89,10 +88,15 @@
             <StopkaFV:stopka ID="stopka1" runat="server" />
             </div>
         
-        <p><a href="#" id="dialog_link" class="ui-state-default ui-corner-all"><span class="ui-icon ui-icon-newwin"></span>Autorzy</a></p>
-	
-		    <div id="dialog" title="Autorzy :">
-			<p>Janusz Kaczmarzyk & Sabina Kowalczyk</p>
+        <br />
+         <!--   <p><a href="#" id="dialog_link1" class="ui-state-default ui-corner-all"><span class="ui-icon ui-icon-newwin"></span>Autorzy</a></p>
+	-->
+		    <div id="dialog" style="text-align: center; color: #146ABD;">
+            <br />
+			<h3>
+            Autorzy :<br />
+            Janusz Kaczmarzyk & Sabina Kowalczyk</h3>
+            <br />
 		    </div>
 
     </div>
