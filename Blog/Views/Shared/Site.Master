@@ -70,7 +70,7 @@
                 <% Html.RenderPartial("LogOnUserControl"); %>
             </div> 
             
-            <div id="menucontainer">
+            <div id="menucontainer" style="float:left;">
             
                 <ul id="menu">              
                     <li><%= Html.ActionLink("Home", "Index", "Home")%></li>
