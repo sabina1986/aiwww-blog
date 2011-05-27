@@ -6,7 +6,44 @@
 </asp:Content>
 
 <asp:Content ID="indexContent" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $(function () {
+        $("#accordion").accordion({
+            autoHeight: false
+        }
+);
+    }
+);
+</script>
 
+<script type="text/javascript">
+ $(document).ready(
+ function(){
+ $("#more"<% %>).hide();
+ $("#link"<% %>).click(
+ function(){
+ $("#more"<% %>).toggle();
+ });
+ });
+
+ </script>
+ <div id="accordion">
+ <% foreach (Post m in (IEnumerable)ViewData.Model) { %>
+  
+ 
+    <h3><a href="#" id="link"><%= Html.Encode(m.tytul) %></a></h3>
+    <div id="more"><%= Html.Encode(m.tresc) %></div>
+
+  
+ 
+ 
+ <% } %>
+</div>
+
+
+
+
+------------------------------------------------------------------------------------------
 <table id="posty" width="1000" border="2px" rules="groups" cellpadding="10" style="border-collapse: collapse;  margin-left: 80px; margin-top: 20px;">
     <tr>
         <th> ID </th>

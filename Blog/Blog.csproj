@@ -102,6 +102,7 @@
     <Content Include="Content\icodna.ico" />
     <Content Include="Content\menu.css" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-ui-1.8.13.custom.min.js" />
     <Content Include="Stopka.ascx" />
     <Content Include="Views\Admin\DodajKomentarz.aspx" />
     <Content Include="Views\Admin\DodajPost.aspx" />

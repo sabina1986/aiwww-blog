@@ -1,6 +1,8 @@
 # to jest komentarz - bêdzie ignorowany
 # nie dla plików *.rozszerzenie
 *.LDF
+*.dll
+*.pbd
 *.mdf
 *.cache
 *.suo
