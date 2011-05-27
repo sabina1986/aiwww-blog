@@ -4,7 +4,7 @@
 	EdytujPosta
 </asp:Content>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server"><!--
 <script type="text/javascript">
     $(function () {
         // Datepicker
@@ -12,9 +12,9 @@
             inline: true
         });
     });
-		</script>
+		</script>-->
 
-    <h2>Edytuj posta</h2>
+    <!--<h2>Edytuj posta</h2>-->
 
     <% using (Html.BeginForm()) {%>
         <%= Html.ValidationSummary(true) %>

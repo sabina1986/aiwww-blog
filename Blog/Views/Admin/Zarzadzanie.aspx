@@ -6,179 +6,77 @@
 </asp:Content>
 
 <asp:Content ID="zarzadzanieContent2" ContentPlaceHolderID="MainContent" runat="server">
-<table id="posty" width="1000" border="2px" rules="groups" cellpadding="10" style="border-collapse: collapse; margin-left: 80px; margin-top: 20px;">
-    <tr>
-        <th> ID </th>
-        <th colspan="2"> Tytuł i treść </th>
-    </tr>
 
-    <% foreach (Post m in (IEnumerable)ViewData.Model) { %>
-    <tbody  style="background-color: #00ACCC;">
-    <tr align="center">
-        <td> <%= Html.Encode(m.id) %> </td>
-        <td colspan="2"> <h1><%= Html.Encode(m.tytul) %></h1> </td>
-    </tr>
-    <tr align="center">
-        <td colspan="3"> <%=Html.Encode(m.tresc) %> </td> 
-    </tr>
-    </tbody>
-    <tbody >
-    <tr align="center">
-        <td> <%= Html.ActionLink("Edytuj", "EdytujPosta", "Admin", new { id=m.id }, null) %> </td>
-        <td> <%= Html.ActionLink("Dodaj komentarz", "DodajKomentarz", "Admin", new { id=m.id }, null ) %> </td>
-        <td> <%= Html.ActionLink("Usuń post", "UsunPosta", "Admin", new { id=m.id }, null ) %>  </td>
-    </tr>
-    </tbody>
-    <tbody>
-    <tr>
-    <td colspan="3">
+<script type="text/javascript">
+    $(function () {
+        $("#accordion").accordion({
+            autoHeight: false
+        }
+);
+    }
+);
+</script>
 
-<!-- tabelka z komentarzami -->
-    <table width="600" border="none" style="float: right;">
-    
-     <% AdminRespository ad = new AdminRespository();
+<script type="text/javascript">
+ $(document).ready(
+ function(){
+ $("#more"<% %>).hide();
+ $("#link"<% %>).click(
+ function(){
+ $("#more"<% %>).toggle();
+ });
+ });
+
+ </script>
+ <div id="accordion" style="padding-left: 30px; padding-top: 10px;">
+ <% foreach (Post m in (IEnumerable)ViewData.Model) { %>
+  
+ 
+    <h2><a href="#" id="link"><%= Html.Encode(m.tytul) %></a></h2>
+    <div id="more"><%= Html.Encode(m.tresc) %>
+    <br /> <br />
+    <div id="klawisze" style="font-size:smaller;">
+    <%= Html.ActionLink("Edytuj", "EdytujPosta", "Admin", new { id=m.id }, null) %>
+    <%= Html.ActionLink("Usuń post", "UsunPosta", "Admin", new { id=m.id }, null ) %>
+    </div>
+    <br />
+    <hr />
+    <h4>    Komentarze :</h4>
+    <div id="klawisz" style="font-size:smaller;">
+    <%= Html.ActionLink("Dodaj komentarz", "DodajKomentarz", "Admin", new { id=m.id }, null ) %> 
+    </div>
+    <br /><br />
+    <% AdminRespository ad = new AdminRespository();
                           Komentarze[] tab=ad.WyswietlKomentarze(m.id);
            
                         if(tab.Length>0)
                             {%>
-    <tr>
-        <th> ID </th>
-        <th colspan="2"> Treść </th>
-    </tr>
+    
           <% foreach (Komentarze k in tab)
                                        {%>
-    <tbody style="background-color: #22EC68;">
-    <tr align="center">
-        <td>
-             <%=Html.Encode(k.id_komentarza) %>
-        </td>     
-        <td colspan="2">
-             <%=Html.Encode(k.tresc_komentarza) %>
-             <br />
-             <%=Html.Encode("Autor: ") %>
-             <%=Html.Encode(k.autor_komentarza) %>
-             <br />
-             <%=Html.Encode("Data dodania: ") %>
-             <%=Html.Encode(k.data_dodania_komentarza) %>
-        </td> 
-    </tr>
-    </tbody>
-    <tr align="center">
-        <td colspan="3">
-            <%= Html.ActionLink("Usuń", "UsunKomentarz", "Admin", new { id=k.id_komentarza }, null) %>
-        </td>   <% }%>   <% }%>
-    </tr>
-    </table>
-    </td>
-    </tr>
-    </tbody>
-     <% } %>
+             <div id="tresc_k" style="padding-left: 60px; font-size:">
+                 <%=Html.Encode(k.tresc_komentarza) %>
+                 <br /><br />
+                 <div id="v_kom" style="padding-left: 60px; font-size:smaller;">
+                 <%=Html.Encode("Autor: ") %>
+                 <%=Html.Encode(k.autor_komentarza) %>
+                 <br />
+                 <%=Html.Encode("Data dodania: ") %>
+                 <%=Html.Encode(k.data_dodania_komentarza) %>
+                 <br />
+                 </div>
+             </div>
+  
+  <% }%>     
+  <% }%>
 
-</table>
- <br />
------------------------------------------------------------------------------------------------------------------------------------------------ <br />
+    </div>
+ <% } %>
+</div>
 
-Nie wiem jak Ci się to podoba, ale siedziałam nad tym kilka godzin ;) Wszelkie uwagi mile widziane. Poniżej stara wersja. <br />
 
------------------------------------------------------------------------------------------------------------------------------------------------ <br />
- <br />
-   <table>
-        <tr>
-            <th></th>
-            <th>
-                ID
-            </th> 
-            <th>
-                Tytul
-            </th>
-         </tr>
+<br />
 
-    <% foreach (Post m in (IEnumerable)ViewData.Model) { %>
-    
-        <tr>
-            <td>
-                <%= Html.ActionLink("Edytuj", "EdytujPosta", "Admin", new { id=m.id }, null) %> |
-                <%= Html.ActionLink("Dodaj Komentarz", "DodajKomentarz", "Admin", new { id=m.id }, null ) %> |
-                <%= Html.ActionLink("Usun Post", "UsunPosta", "Admin", new { id=m.id }, null ) %> |
-                 
-               
-            </td>
-                 <td>
-                    <%= Html.Encode(m.id) %>
-                </td> 
-            <td>
-
-                <table>
-                    <tr>
-                        <td>
-                        
-                            <h1><%= Html.Encode(m.tytul) %></h1><br />
-                              <%=Html.Encode(m.tresc) %>
-                        </td>
-                     </tr>
-                
-                <% AdminRespository ad = new AdminRespository();
-                          Komentarze[] tab=ad.WyswietlKomentarze(m.id);
-           
-                        if(tab.Length>0)
-                        {%>
-                    <tr>
-                        <td>
-
-                        <table>
-                                <tr>
-                                     <th></th> 
-                                    <th> ID</th>
-                                    <th> Komentarz</th>
-                                </tr>
-                                
-                                 
-                                       <% foreach (Komentarze k in tab)
-                                       {%>
-
-                                <tr>
-
-                                     <td>
-                                        <%= Html.ActionLink("Usuń", "UsunKomentarz", "Admin", new { id=k.id_komentarza }, null) %> |
-                                    </td> 
-                                     <td>
-                                            <%=Html.Encode(k.id_komentarza) %>
-                                    </td> 
-                                    <td>
-                                       
-                                           <%=Html.Encode(k.tresc_komentarza) %>
-                                           <br />
-                                           <%=Html.Encode("Autor: ") %>
-                                           <%=Html.Encode(k.autor_komentarza) %>
-                                           <br />
-                                           <%=Html.Encode("Data dodania: ") %>
-                                           <%=Html.Encode(k.data_dodania_komentarza) %>
-
-                                    
-                                    </td>
-                                
-
-                                </tr>
-                                     <% }%>
-                                    
-                            </table>
-                            
-                           
-                               
-                        </td>
-                    </tr>
-                    <% }%>        
-
-                </table>
-                
-
-            </td>
-            
-        </tr>
-    
-    <% } %>
-
-    </table>
     
     <p>
         <%= Html.ActionLink("Dodaj Post", "DodajPost", "Admin") %>
