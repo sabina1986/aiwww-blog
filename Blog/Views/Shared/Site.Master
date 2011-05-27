@@ -45,6 +45,7 @@
 });
 		</script>
         <style type="text/css">
+            p { padding-left: 30px;}
 			/*demo page css*/
 			/*body{ font: 62.5% "Trebuchet MS", sans-serif; margin: 50px;}**/
 			#dialog {border: solid; border-color: #146ABD; background-color: #ADFFFF;}

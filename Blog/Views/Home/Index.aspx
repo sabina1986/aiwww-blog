@@ -73,9 +73,10 @@
 
 
 <br />
- <p>
-        <%= Html.ActionLink("Dodaj Post", "DodajPost", "Admin") %>
-</p>
+
+        <p> <%= Html.ActionLink("Dodaj Post", "DodajPost", "Admin") %></p>
+<br />
+
 
 
 </asp:Content>
