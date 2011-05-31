@@ -5,22 +5,11 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server"><!--
-<script type="text/javascript">
-    $(function () {
-        // Datepicker
-        $('#datepicker').datepicker({
-            inline: true
-        });
-    });
-		</script>-->
 
-    <!--<h2>Edytuj posta</h2>-->
 
     <% using (Html.BeginForm()) {%>
         <%= Html.ValidationSummary(true) %>
-        
-        <div id="datepicker"></div>
-
+     
         <fieldset>
             <legend>Pola</legend>
             <!--
