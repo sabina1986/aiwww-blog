@@ -11,7 +11,7 @@
     </p>-->
 
     <% using (Html.BeginForm()) { %>
-        <%= Html.ValidationSummary(true, "Logowanie przebiegło poprawnie.") %>
+        <%= Html.ValidationSummary() %>
         <div>
             <fieldset>
                 <legend>Informacje o koncie</legend>
