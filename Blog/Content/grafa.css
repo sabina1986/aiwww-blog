@@ -115,12 +115,6 @@ a:active, a:hover
      width: 200px;
 }
 
-input
-{
-    width: 800px;
-    height: 200px;    
-}
-
 #tresc_komentarza, #tresc
 {
     width: 800px;
@@ -153,3 +147,14 @@ table
     width: 1000;
 }
 
+#UserName, #Password
+{
+    width: 200px;
+    height: 20px;
+}
+
+#RememberMe
+{
+    width: 50px;
+    height: 20px;
+}

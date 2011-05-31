@@ -44,6 +44,8 @@
 
 });
 		</script>
+     
+        
         <style type="text/css">
             p { padding-left: 30px;}
 			/*demo page css*/
@@ -84,6 +86,7 @@
         <div id="main" style=" background-image: ('./baner2.jpg');">
             <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
          </div>   
+        
          
             <div id="footer">
             <StopkaFV:stopka ID="stopka1" runat="server" />
