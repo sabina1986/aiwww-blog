@@ -76,7 +76,10 @@
             
                 <ul id="menu">              
                     <li><%= Html.ActionLink("Home", "Index", "Home")%></li>
-                    <li><%= Html.ActionLink("Management", "Zarzadzanie", "Admin")%></li>
+                    <%if (Page.User.Identity.IsAuthenticated)
+                      {%>
+                        <li><%= Html.ActionLink("Management", "Zarzadzanie", "Admin")%></li>
+                    <%}%>
                     <li><a href="#" id="dialog_link" class="ui-state-default ui-corner-all"><span class="ui-icon ui-icon-newwin"></span>Autorzy</a></li>
                 </ul>
 
