@@ -2,7 +2,7 @@
 <%
     if (Request.IsAuthenticated) {
 %>
-        Welcome <b><%= Html.Encode(Page.User.Identity.Name) %></b>!
+        Witaj szanowny użytkowniku : <b><%= Html.Encode(Page.User.Identity.Name) %></b>!
         [ <%= Html.ActionLink("Wyloguj", "LogOff", "Account") %> ]
 <%
     }
